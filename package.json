@@ -1,0 +1,25 @@
+{
+  "name": "discord-bot-bun-djs-v14",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "start": "bun run dist/index.js",
+    "deploy-commands": "bun run scripts/deploy-commands.ts",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --write .",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "typescript": "^5.8.3"
+  }
+}
